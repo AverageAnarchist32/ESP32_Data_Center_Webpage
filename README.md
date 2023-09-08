@@ -14,6 +14,8 @@
 ## Introduction
 Meet the Automated_LEDcontroller, a project born from a school assignment. This project is all about controlling a light remotely using a website. Here's how it works: We have a small computer called an ESP32 that can connect to the internet. I wrote a program for it to control a light, and it can also measure how bright the room is. The program sends this information to a webpage, so you can see and control the light from anywhere. It's like having a remote control for your room's lighting. This project is a cool mix of hardware and software, and it's a fun way to learn about technology.
 
+thanks you for choosing this project
+
 
 ## Features:
 - Web-server, WiFi based client manager and server HTML webpage
