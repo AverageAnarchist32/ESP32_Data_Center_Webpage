@@ -1,0 +1,57 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 24px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  /* Add some additional styling for the LED status */
+  #ledStatus {
+    color: #28A745;
+  }
+  
+  /* Add hover effect for the content */
+  p:hover {
+    color: #FF5733;
+    cursor: pointer;
+  }
+  
+  /* Apply a fade-in effect on page load */
+  body {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
