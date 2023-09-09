@@ -8,8 +8,8 @@
 #define ANALOG_THRESHOLD  3000 // Threshold value for the light sensor
 
 // WiFi credentials
-const char* ssid = "";
-const char* password = "";
+const char* ssid = "TKZ-10";
+const char* password = "Careful11";
 
 // Create an instance of the web server
 AsyncWebServer server(80);
@@ -44,12 +44,27 @@ void loop() {
   // Read the analog value from the light sensor
   int analogValue = analogRead(LIGHT_SENSOR_PIN);
 
+  // Call a function to control the LED based on the analog value
+  controlLED(analogValue);
+
+  // Read the analog value from the light sensor after updating the LED
+  debug();
+}
+
+void controlLED(int analogValue) {
   // Update the LED based on the analog value and threshold
   if (analogValue < ANALOG_THRESHOLD)
     digitalWrite(LED_PIN, HIGH); // Turn on the LED if the analog value is below the threshold
   else
     digitalWrite(LED_PIN, LOW);  // Turn off the LED if the analog value is above or equal to the threshold
+}
 
+void debug(){
+  int analogValue = analogRead(LIGHT_SENSOR_PIN);
+    // Print the analog value to the serial monitor
+  Serial.print("Light Sensor Value: ");
+  Serial.println(analogValue);
+  delay(3000);
 }
 
 void connectToWiFi() {
