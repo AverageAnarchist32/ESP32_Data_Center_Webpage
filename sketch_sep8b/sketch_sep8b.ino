@@ -8,8 +8,8 @@
 #define ANALOG_THRESHOLD  3000 // Threshold value for the light sensor
 
 // WiFi credentials
-const char* ssid = "TKZ-10";
-const char* password = "Careful11";
+const char* ssid = "";
+const char* password = "";
 
 // Create an instance of the web server
 AsyncWebServer server(80);
