@@ -8,8 +8,8 @@
 #define ANALOG_THRESHOLD  3000 // Threshold value for the light sensor
 
 // WiFi credentials
-const char* ssid = "";
-const char* password = "";
+const char* ssid = "Proxima";
+const char* password = "centauri";
 
 // Create an instance of the web server
 AsyncWebServer server(80);

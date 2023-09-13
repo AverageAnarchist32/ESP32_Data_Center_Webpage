@@ -1,7 +1,7 @@
 {
   "name": "automated_ledcontroller",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Table of Contents - [Introduction](#introduction) - [Features](#features) - [Project Structure](#project-structure) - [Getting Started](#getting-started)   - [Prerequisites](#prerequisites)   - [Installation](#installation) - [Usage](#usage) - [Customization](#customization) - [Contributing](#contributing)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +13,6 @@
   "dependencies": {
     "axios": "^1.5.0",
     "express": "^4.18.2"
-  }
+  },
+  "devDependencies": {}
 }
