@@ -10,8 +10,8 @@
 #define PIEZO_BUZZER_PIN 26    // GPIO for piezo buzzer
 
 // WiFi credentials
-const char* ssid = "TKZ-10";
-const char* password = "Careful11";
+const char* ssid = "";
+const char* password = "";
 
 // Create an instance of the web server
 AsyncWebServer server(80);
