@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light Sensor Status</title>
+  <title>ESP32 Sensor Data</title>
   <!-- Link to the external CSS file -->
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Light Sensor Status</h1>
+  <h1>ESP32 Sensor Data</h1>
   <p>Light Sensor Analog Value: <span id="analogValue">Loading...</span></p>
   <p>LED Status: <span id="ledStatus">Loading...</span></p>
+  <p>Humidity: <span id="humidity">Loading...</span></p>
+  <p>Temperature: <span id="temperature">Loading...</span></p>
+
   <script>
     function updateStatus() {
       fetch('/status')
@@ -18,6 +21,8 @@
         .then(data => {
           document.getElementById('analogValue').textContent = data.analogValue;
           document.getElementById('ledStatus').textContent = data.ledStatus;
+          document.getElementById('humidity').textContent = data.humidity;
+          document.getElementById('temperature').textContent = data.temperature;
         })
         .catch(error => console.error(error));
     }

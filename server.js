@@ -12,7 +12,15 @@ app.get('/status', async (req, res) => {
     const esp32Response = await axios.get('http://192.168.1.114/data'); // Replace with your ESP32's IP and endpoint
     const esp32Data = esp32Response.data;
 
-    res.json(esp32Data);
+    // Combine the data from ESP32 into a JSON response
+    const combinedData = {
+      analogValue: esp32Data.analogValue,
+      ledStatus: esp32Data.ledStatus,
+      humidity: esp32Data.humidity, // Add humidity data from the ESP32
+      temperature: esp32Data.temperature, // Add temperature data from the ESP32
+    };
+
+    res.json(combinedData);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Unable to fetch data from ESP32' });
