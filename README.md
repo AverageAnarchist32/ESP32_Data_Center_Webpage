@@ -21,6 +21,7 @@ thanks you for choosing this project
 - Web-server, WiFi based client manager and server HTML webpage
 - Autotmatic dynamic webpage which updates values simultaneously 
 - Automatic LED Change (on or off) and light sensor value readings displayed on webpage
+- Integration with DHT sensor to provide real-time temperature and humidity readings.
 
 
 ## Project Structure
@@ -79,3 +80,14 @@ Chat/s Title: Automated_LEDcontroller Project Setup
 Date: September 8, 2023
 Description: This chat session covers the setup and documentation of the "Automated_LEDcontroller" project, including the project structure, installation guide, and README.md file generation.
 
+ChatGPT. "ESP32 DHT-11 Sensor Wiring Diagram." OpenAI, 19 Sep. 2023, https://chat.openai.com/chatgpt/...
+
+"Random Nerd Tutorials. (2023, September 2). ESP32 DHT11/DHT22 Temperature and Humidity Sensor with Arduino IDE. Retrieved from https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-sensor-arduino-ide/"
+
+"ESP32 IO. (2023, September 2). ESP32 Temperature and Humidity Sensor Tutorial. Retrieved from https://esp32io.com/tutorials/esp32-temperature-humidity-sensor/"
+
+"ESP32 IO. (2023, September 3). ESP32 LED Blink Tutorial. Retrieved from https://esp32io.com/tutorials/esp32-led-blink#google_vignette"
+
+"ESP32 IO. (2023, September 5). ESP32 Piezo Buzzer Tutorial. Retrieved from https://esp32io.com/tutorials/esp32-piezo-buzzer"
+
+"Hibit.dev. (2023, September 14). Playing Popular Songs with Arduino and a Buzzer. Retrieved from https://www.hibit.dev/posts/62/playing-popular-songs-with-arduino-and-a-buzzer"

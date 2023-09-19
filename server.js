@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.get('/status', async (req, res) => {
   try {
     // Send an HTTP GET request to the ESP32 to fetch data
-    const esp32Response = await axios.get('http://192.168.1.114/data'); // Replace with your ESP32's IP and endpoint
+    const esp32Response = await axios.get('http://ip address/data'); // Replace with your ESP32's IP and endpoint
     const esp32Data = esp32Response.data;
 
     // Combine the data from ESP32 into a JSON response
