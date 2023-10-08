@@ -6,17 +6,17 @@
 
 // Constants won't change
 #define LIGHT_SENSOR_PIN 35    // ESP32 pin GPIO35 (ADC1) connected to the light sensor
-#define LED_PIN 14            // ESP32 pin GPIO27 connected to the LED
+#define LED_PIN 14             // ESP32 pin GPIO27 connected to the LED
 #define ANALOG_THRESHOLD 3000  // Threshold value for the light sensor
 #define PIEZO_BUZZER_PIN 26    // GPIO for piezo buzzer
-#define DHTPIN 27  // Define the GPIO pin to which the DHT-11 is connected
-#define DHTTYPE DHT11  // Define the type of DHT sensor (DHT11)
+#define DHTPIN 27              // Define the GPIO pin to which the DHT-11 is connected
+#define DHTTYPE DHT11          // Define the type of DHT sensor (DHT11)
 
 DHT dht(DHTPIN, DHTTYPE);  // Initialize the DHT sensor
 
 // WiFi credentials
-const char* ssid = "";
-const char* password = "";
+const char* ssid = "TKZ-10";
+const char* password = "Careful11";
 
 // Create an instance of the web server
 AsyncWebServer server(80);
@@ -41,19 +41,19 @@ void setup() {
   pinMode(PIEZO_BUZZER_PIN, OUTPUT);
 
   // Initialize LEDC timer and channel for the piezo buzzer
-  ledcSetup(0, 1000, 8); // Initialize LEDC channel 0 with a frequency of 1000 Hz and 8-bit depth
-  ledcAttachPin(PIEZO_BUZZER_PIN, 0); // Attach the channel to the piezo buzzer pin
+  ledcSetup(0, 1000, 8);               // Initialize LEDC channel 0 with a frequency of 1000 Hz and 8-bit depth
+  ledcAttachPin(PIEZO_BUZZER_PIN, 0);  // Attach the channel to the piezo buzzer pin
 
   // Route for serving sensor data
   server.on("/data", HTTP_GET, [](AsyncWebServerRequest* request) {
     // Read the analog value from the light sensor
     int analogValue = analogRead(LIGHT_SENSOR_PIN);
 
-    
-  // Read humidity and temperature from the DHT sensor
-  float humidity = dht.readHumidity();
-  float temperature = dht.readTemperature();
-    
+
+    // Read humidity and temperature from the DHT sensor
+    float humidity = dht.readHumidity();
+    float temperature = dht.readTemperature();
+
 
     // Create a JSON response
     String response = "{\"analogValue\":" + String(analogValue) + ",";
@@ -82,7 +82,7 @@ void loop() {
   // Call a function to control the LED and play the song based on the analog value
   controlLED(analogValue);
 
-  float humidity = dht.readHumidity();    // Read humidity value
+  float humidity = dht.readHumidity();        // Read humidity value
   float temperature = dht.readTemperature();  // Read temperature value (in Celsius)
 
 
@@ -92,13 +92,13 @@ void loop() {
 void controlLED(int analogValue) {
   // Update the LED based on the analog value and threshold
   if (analogValue < ANALOG_THRESHOLD) {
-    digitalWrite(LED_PIN, HIGH); // Turn on the LED if the analog value is below the threshold
-    playSong(); // Play the song when the LED turns on
-    ledcDetachPin(PIEZO_BUZZER_PIN); // Deinitialize LEDC channel
+    digitalWrite(LED_PIN, HIGH);      // Turn on the LED if the analog value is below the threshold
+    playSong();                       // Play the song when the LED turns on
+    ledcDetachPin(PIEZO_BUZZER_PIN);  // Deinitialize LEDC channel
   } else {
-    digitalWrite(LED_PIN, LOW);  // Turn off the LED if the analog value is above or equal to the threshold
-    noTone(PIEZO_BUZZER_PIN); // Stop the buzzer when the LED turns off
-    ledcDetachPin(PIEZO_BUZZER_PIN); // Deinitialize LEDC channel
+    digitalWrite(LED_PIN, LOW);       // Turn off the LED if the analog value is above or equal to the threshold
+    noTone(PIEZO_BUZZER_PIN);         // Stop the buzzer when the LED turns off
+    ledcDetachPin(PIEZO_BUZZER_PIN);  // Deinitialize LEDC channel
   }
 }
 

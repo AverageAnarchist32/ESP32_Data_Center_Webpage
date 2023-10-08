@@ -1,19 +1,25 @@
-/* styles.css */
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   transition: background-color 0.5s ease-in-out;
-  background-image: linear-gradient(to bottom, #f0f0f0, #dcdcdc); /* Gradient background */
+  background-image: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+  border: 5px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Add a background pattern to the body */
 body::before {
   content: '';
   position: fixed;
@@ -21,54 +27,29 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('your-pattern-image.jpg'); /* Replace with your pattern image URL */
-  opacity: 0.1; /* Adjust the opacity of the pattern */
-  pointer-events: none; /* Allow clicks to pass through */
-  z-index: -1; /* Place the pattern behind other content */
+  background-image: url('your-pattern-image.jpg');
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
 }
 
-/* Style the background for hover effect on paragraphs */
-p {
-  position: relative;
-  z-index: 1; /* Place paragraphs above other content */
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-  -webkit-background-clip: text; /* Clip the text to the background for compatibility */
-  background-clip: text; /* Standard background-clip property */
-}
-
-/* Style the headings for hover effect */
-h1:hover,
-p:hover {
-  color: #000; /* Change text color to black on hover */
-}
-
-/* Apply a subtle animation to the background color */
-body {
-  animation: changeBgColor 5s linear infinite alternate;
-}
-
-@keyframes changeBgColor {
-  0% {
-    background-color: #f0f0f0;
-  }
-  100% {
-    background-color: #dcdcdc;
-  }
-}
-
-h1 {
-  color: #333;
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
+h1,
 p {
   font-size: 24px;
-  color: #666;
-  margin: 10px 0;
   line-height: 1.5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+h1:hover {
+  background: linear-gradient(to bottom, #FF5733, #FFC300); /* Gradient background on hover for h1 */
+  color: #fff; /* Change text color on hover */
+}
+
+p:hover {
+  background: linear-gradient(to bottom, #007BFF, #00FFD8); /* Gradient background on hover for p */
+  color: #fff; /* Change text color on hover */
 }
 
 span {
@@ -76,41 +57,33 @@ span {
   color: #007BFF;
 }
 
-/* Add some additional styling for the LED status */
 #ledStatus {
   color: #28A745;
 }
 
-/* Add styling for temperature and humidity */
 #temperature {
-  color: #FF5733; /* Set the color for temperature */
+  color: #FF5733;
   font-weight: bold;
 }
 
 #humidity {
-  color: #0099cc; /* Set the color for humidity */
+  color: #0099cc;
   font-weight: bold;
 }
 
-/* Add hover effect for the content */
-p:hover {
-  color: #FF5733;
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
+/* Add a pulse animation to the LED status */
+#ledStatus {
+  animation: pulse 1s ease-in-out infinite;
 }
 
-/* Apply a fade-in effect on page load */
-body {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
+@keyframes pulse {
   0% {
-    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
   }
   100% {
-    opacity: 1;
+    transform: scale(1);
   }
 }
