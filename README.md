@@ -36,7 +36,7 @@ thanks you for choosing this project
 
 ## Installation Guide
 
-Follow these steps to install and set up your "Automated_LEDcontroller" project:
+Follow these steps to install and set up your project:
 
 ### Prerequisites
 
@@ -70,7 +70,7 @@ Before you begin, make sure you have the following prerequisites:
 
 ### Usage
 
-Now that you've installed the necessary software and uploaded the code to your ESP32, you can start using your "Automated_LEDcontroller" project. Follow the instructions provided in the project documentation to interact with the LED and monitor the light sensor data.
+Now that you've installed the necessary software and uploaded the code to your ESP32, you can start using your project. Follow the instructions provided in the project documentation to interact with the LED and monitor the light sensor data.
 
 
 ### References
