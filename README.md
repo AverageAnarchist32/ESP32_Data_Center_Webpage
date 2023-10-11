@@ -1,4 +1,4 @@
-# Automated_LEDcontroller
+# Data Center ESP32
 
 ## Table of Contents
 - [Introduction](#introduction)
