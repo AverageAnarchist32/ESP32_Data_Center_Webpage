@@ -21,13 +21,13 @@ const char* password = "centauri";
 // Create an instance of the web server
 AsyncWebServer server(80);
 
-// Define song-related constants and variables
+/// Define song-related constants and variables
 const int songLength = 18;
 char notes[] = "cdfda ag cdfdg gf ";
 int beats[] = { 1, 1, 1, 1, 1, 1, 4, 4, 2, 1, 1, 1, 1, 1, 1, 4, 4, 2 };
 int tempo = 113;
-
 void setup() {
+
   // Initialize serial communication
   Serial.begin(115200);
 

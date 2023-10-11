@@ -4,6 +4,27 @@
   padding: 0;
 }
 
+/* Add background color and vertical spacing to sensor sections */
+.sensor-section {
+  background-color: #f0f0f0; /* Set the background color */
+  padding: 20px; /* Add vertical spacing around each section */
+  margin: 10px 0; /* Add margin to separate sections vertically */
+  border: 5px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the header */
+.header {
+  background: linear-gradient(to bottom, #007BFF, #00FFD8); /* Gradient background for the header */
+  color: #fff; /* Text color in the header */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;

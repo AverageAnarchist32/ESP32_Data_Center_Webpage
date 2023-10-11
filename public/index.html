@@ -8,11 +8,24 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>ESP32 Sensor Data</h1>
-  <p>Light Sensor Analog Value: <span id="analogValue">Loading...</span></p>
-  <p>LED Status: <span id="ledStatus">Loading...</span></p>
-  <p>Humidity: <span id="humidity">Loading...</span></p>
-  <p>Temperature: <span id="temperature">Loading...</span></p>
+  <header class="header">
+    <h1>ESP32 Sensor Dataplace</h1>
+  </header>
+  <section id="weather-section" class="sensor-section">
+    <h2>Weather Sensor Data</h2>
+    <p>Humidity: <span id="humidity">Loading...</span></p>
+    <p>Temperature: <span id="temperature">Loading...</span></p>
+  </section>
+
+  <section id="led-section" class="sensor-section">
+    <h2>LED Status</h2>
+    <p>LED Status: <span id="ledStatus">Loading...</span></p>
+  </section>
+
+  <section id="light-sensor-section" class="sensor-section">
+    <h2>Light Sensor Value</h2>
+    <p>Light Sensor Analog Value: <span id="analogValue">Loading...</span></p>
+  </section>
 
   <script>
     function updateStatus() {
