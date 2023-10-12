@@ -1,4 +1,4 @@
-# Automated_LEDcontroller
+# Data Center ESP32
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,7 +12,7 @@
 - [Contributing](#contributing)
 
 ## Introduction
-Meet the Automated_LEDcontroller, a project born from a school assignment. This project is all about controlling a light remotely using a website. Here's how it works: We have a small computer called an ESP32 that can connect to the internet. I wrote a program for it to control a light, and it can also measure how bright the room is. The program sends this information to a webpage, so you can see and control the light from anywhere. It's like having a remote control for your room's lighting. This project is a cool mix of hardware and software, and it's a fun way to learn about technology.
+This was a project born from a school assignment. This project is all about controlling a light remotely using a website. Here's how it works: We have a small computer called an ESP32 that can connect to the internet. It showcases different sensor values through a front-end html js served webpage. 
 
 thanks you for choosing this project
 
@@ -36,7 +36,7 @@ thanks you for choosing this project
 
 ## Installation Guide
 
-Follow these steps to install and set up your "Automated_LEDcontroller" project:
+Follow these steps to install and set up your project:
 
 ### Prerequisites
 
@@ -70,7 +70,7 @@ Before you begin, make sure you have the following prerequisites:
 
 ### Usage
 
-Now that you've installed the necessary software and uploaded the code to your ESP32, you can start using your "Automated_LEDcontroller" project. Follow the instructions provided in the project documentation to interact with the LED and monitor the light sensor data.
+Now that you've installed the necessary software and uploaded the code to your ESP32, you can start using your project. Follow the instructions provided in the project documentation to interact with the LED and monitor the light sensor data.
 
 
 ### References
