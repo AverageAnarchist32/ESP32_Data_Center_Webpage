@@ -12,7 +12,7 @@
 - [Contributing](#contributing)
 
 ## Introduction
-This was a project born from a school assignment. This project is all about controlling a light remotely using a website. Here's how it works: We have a small computer called an ESP32 that can connect to the internet. It showcases different sensor values through a front-end html js served webpage. 
+This was a project born from a school assignment. This project is all about controlling a light remotely using a website. Here's how it works: We have a small computer called an ESP32 that can connect to the internet. It showcases different sensor values through a front-end html js served webpage. It takes data from several different sensors and displays them on a webpage. It also output a rick-roll (-_-) from a piezo buzzer and turns an LED on when the light sensor vlaue drops below a certain threshold. Showing the status of the LED as well.
 
 thanks you for choosing this project
 
