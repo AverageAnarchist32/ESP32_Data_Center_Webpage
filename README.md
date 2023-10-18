@@ -24,6 +24,7 @@ thanks you for choosing this project
 - Integration with DHT sensor to provide real-time temperature and humidity readings.
 
 
+
 ## Project Structure
 - Automated_LEDcontroller/
   - esp32/
@@ -71,6 +72,8 @@ Before you begin, make sure you have the following prerequisites:
 ### Usage
 
 Now that you've installed the necessary software and uploaded the code to your ESP32, you can start using your project. Follow the instructions provided in the project documentation to interact with the LED and monitor the light sensor data.
+- Multi-sensor programme which can display light sensor values from a room and turn the light on or off accordingly
+- Also displays the temeprature and humidity within the same environment.
 
 
 ### References
